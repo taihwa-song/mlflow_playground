@@ -10,3 +10,11 @@ entry_points:
     command: "python train.py
                             --max-depth {max_depth}
                             --min-samples-leaf {min_samples_leaf}"
+
+  random:
+    parameters:
+      max_runs: {type: int, default: 8}
+      max_p: {type: int, default: 2}
+    command: "python search_random.py
+                            --max-runs {max_runs}
+                            --max-p {max_p}"
